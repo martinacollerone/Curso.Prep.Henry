@@ -41,19 +41,19 @@ function suma(x, y) {
 function resta(x, y) {
   // Resta "y" de "x" y devuelve el valor
   // Tu código:
-  return y - x
+  return (x - y)
 }
 
 function multiplica(x, y) {
   // Multiplica "x" por "y" y devuelve el valor
   // Tu código:
-  return x * y
+  return (x * y)
 }
 
 function divide(x, y) {
   // Divide "x" entre "y" y devuelve el valor
   // Tu código:
-  reutrn (x * y)
+  return (x/y)
 }
 
 function sonIguales(x, y) {
@@ -63,7 +63,7 @@ function sonIguales(x, y) {
   if (x == y) {
     return true
   } else {
-    reutrn false;
+    return false
   }
 }
 
@@ -74,7 +74,7 @@ function tienenMismaLongitud(str1, str2) {
   if (str1.length == str2.length) {
     return true
   } else {
-    reutrn false
+    return false
   }
 }
 
@@ -82,7 +82,7 @@ function menosQueNoventa(num) {
   // Devuelve "true" si el argumento de la función "num" es menor que noventa
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (num > 90) {
+  if (num < 90) {
     return true
   } else {
     return false
@@ -112,7 +112,7 @@ function esPar(num) {
   if (num % 2 == 0){
     return true
   } else {
-    reutrn false
+    return false
   }
 }
 
@@ -121,9 +121,9 @@ function esImpar(num) {
   // De lo contrario, devuelve "false"
   // Tu código:
   if (num % 2 != 0) {
-    return 'es impar'
+    return true
   } else {
-    reutrn (false)
+    return false
   }
 }
 
@@ -137,31 +137,31 @@ function elevarAlCuadrado(num) {
 function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
-  reutrn (math.pow(num, 3))
+  return (Math.pow(num, 3))
 }
 
 function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
-  reutrn (math.pow(num, exponent))
+  return (Math.pow(num, exponent))
 }
 
 function redondearNumero(num) {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
-  return (math.round(num))
+  return (Math.round(num))
 }
 
 function redondearHaciaArriba(num) {
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
   // Tu código:
-  return (math.ceil(num))
+  return (Math.ceil(num))
 }
 
 function numeroRandom() {
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
-  return (math.random())
+  return (Math.random())
 }
 
 function esPositivo(numero) {
@@ -169,9 +169,9 @@ function esPositivo(numero) {
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
-  if (num > 0) {
+  if (numero > 0) {
     return 'Es positivo'
-  } else if (num == 0) {
+  } else if (numero == 0) {
     return false
   } else {
     return 'Es negativo'
@@ -198,7 +198,7 @@ function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  var salu2 = 'Hola, ' + nombre + '!'
+  var salu2 = 'Hola ' + nombre + '!'
   return salu2
 }
 
@@ -241,13 +241,12 @@ function esVocal(letra){
   //Verificar si el usuario ingresó un string de más de un carácter y, en ese caso, informarle 
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   //Escribe tu código aquí
-  var vocales = a, e, i, o, u
   if (letra.length > 1) {
     return 'Dato incorrecto'
-  } else if (letra in vocales) {
+  } else if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u') {
     return 'Es vocal'
   } else {
-    return 'No es vocal'
+    return 'Dato incorrecto'
   }
 }
 
